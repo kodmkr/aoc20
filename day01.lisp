@@ -16,10 +16,10 @@
   (let ((nums (read-input "./input/day01")))
     (with-brute-force ((i j) nums)
       (when (= (+ i j) 2020)
-        (* i j)))))
+        (return-from sol1 (* i j))))))
 
 (defun sol2 ()
   (let ((nums (read-input "./input/day01")))
     (with-brute-force ((i j k) nums)
       (when (= (+ i j k) 2020)
-        (* i j k)))))
+        (return-from sol2 (* i j k))))))
